@@ -1,0 +1,34 @@
+<article>
+	<header>
+		<h2>
+			<a href="#">{{ post.title }}</a>
+		</h2>
+
+		<p>
+			<small class="glyphicon glyphicon-user"></small>
+			by <a href="#">{{ post.author }}</a>
+		</p>
+		<p>
+			<small class="glyphicon glyphicon-time"></small>
+			{{ post.date | date }}
+		</p>
+	</header>
+
+	<!-- Post Description -->
+	<p>{{ post.description }}</p>
+	<br>
+
+	<footer class="clearfix">
+		<p class="pull-left">
+			<b>Tags:&nbsp;</b>
+			<span ng-repeat="tag in post.tags">
+				<a href="#" class="label label-default">{{ tag }}</a>
+			</span>
+		</p>
+
+		<a class="btn btn-primary pull-right" href="#">
+			Read More <i class="glyphicon glyphicon-chevron-right"></i>
+		</a>
+	</footer>
+	<hr>
+</article>
